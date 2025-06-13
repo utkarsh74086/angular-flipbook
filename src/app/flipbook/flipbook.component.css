@@ -114,10 +114,9 @@
 }
 
 .page-image {
-  height: 105%;
-  width: 108%;
-  margin-top: -40px;
-  margin-left: -15px;
+  height: 100%;
+  width: 100%;
+
 }
 
 .page-content {
@@ -219,6 +218,6 @@
     font-size: 0.8rem;
   }
   .page-image{
-    height: 107%;
+    height: 100%;
   }
 }

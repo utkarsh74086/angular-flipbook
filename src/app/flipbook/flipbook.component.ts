@@ -21,7 +21,7 @@ export class FlipbookComponent implements OnInit {
 
   ngOnInit() {
     this.pageFlipAudio = new Audio('../../assets/811255__nicolaslikesthiswebsite496__pageturn.mp3'); 
-    this.loadPdf('../../assets/Screenshot (266).pdf'); 
+    this.loadPdf('https://kaboodlebucket.blr1.cdn.digitaloceanspaces.com/SCHOOLS_WEBSITE_CONTENT/1743768813536-fs_1_theme_1_who_am_i.pdf'); 
   }
 
   async loadPdf(pdfPath: string) {
@@ -71,7 +71,7 @@ export class FlipbookComponent implements OnInit {
         this.flipDirection = '';
         this.nextPageIndex = null;
         this.isAnimating = false;
-      }, 600);
+      },0);
     }
   }
 
@@ -88,7 +88,7 @@ export class FlipbookComponent implements OnInit {
         this.flipDirection = '';
         this.prevPageIndex = null;
         this.isAnimating = false;
-      }, 600);
+      },0);
     }
   }
 
