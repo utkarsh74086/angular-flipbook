@@ -1,19 +1,18 @@
 <div class="flipbook-container" (swipeleft)="onSwipeLeft()" (swiperight)="onSwipeRight()">
   <div class="flipbook">
-    <div class="page" *ngFor="let page of pages; let i = index" 
-         [class]="getPageClasses(i)">
+    <div class="page" *ngFor="let pageUrl of canvasPages; let i = index" [class]="getPageClasses(i)">
       <div class="page-content">
-        <img [src]="page.imageUrl" [alt]="page.altText || ''" class="page-image">
+        <img [src]="pageUrl" alt="PDF Page" class="page-image" />
       </div>
     </div>
   </div>
   <div class="navigation">
     <button (click)="prevPage()" [disabled]="currentPage === 1 || isAnimating" class="nav-button">
-      <span class="arrow">←</span>
+      ←
     </button>
     <button (click)="nextPage()" [disabled]="currentPage === totalPages || isAnimating" class="nav-button">
-      <span class="arrow">→</span>
+      →
     </button>
-    <span class="page-indicator">{{currentPage}}/{{totalPages}}</span>
+    <span class="page-indicator">{{ currentPage }}/{{ totalPages }}</span>
   </div>
 </div>
